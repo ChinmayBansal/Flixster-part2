@@ -7,22 +7,42 @@
 
 import UIKit
 
-class MovieListViewController: UIViewController {
+class MovieListViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return movies.count
+    }
     
-    var movies: [Movie] = [Movie]()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        
+        let movie  = movies[indexPath.row]
+        
+        cell.configure(with: movie)
+        
+        return cell
+    }
+    
+    
+//    var movies: [Movie] = [Movie]()
+    var movies: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        movies = MoviesResponse.loadJson()
-        
+//        movies = MoviesResponse.loadJson()
+        movies = Movie.mockMovies
         for movie in movies {
             print(movie.original_title)
         }
+        
+        tableView.dataSource = self
     }
     
-
+    @IBOutlet weak var tableView: UITableView!
+    
     /*
     // MARK: - Navigation
 
