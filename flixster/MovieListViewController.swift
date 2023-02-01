@@ -43,6 +43,35 @@ class MovieListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: Pt 1 - Pass the selected track to the detail view controller
+        
+        if let cell = sender as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell),
+           let detailViewController = segue.destination as? DetailViewController {
+           let movie = movies[indexPath.row]
+            
+           detailViewController.movie = movie
+
+            }
+        
+           
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+
+            // Deselect the row at the corresponding index path
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+       
+    }
+    
     /*
     // MARK: - Navigation
 
