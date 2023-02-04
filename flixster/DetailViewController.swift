@@ -15,15 +15,15 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        Nuke.loadImage(with: movie.posterImageURL, into: backdropImage)
+        Nuke.loadImage(with:URL(string:"https://image.tmdb.org/t/p/w185" + movie.poster_path)!, into: backdropImage)
         
         movieName.text = movie.original_title
         
         let votes_average = String(movie.vote_average)
         averageVotesLabel.text = votes_average
         
-        let popularity = String(movie.popularity)
-        popularityLabel.text = popularity
+//        let popularity = String(movie.popularity)
+//        popularityLabel.text = popularity
         
         let num_votes = String(movie.vote_count)
         popularityLabel.text = num_votes
