@@ -22,7 +22,6 @@
 		D32F09B62989B603005DBC47 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F09B52989B603005DBC47 /* MovieCell.swift */; };
 		D32F09B82989E07B005DBC47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F09B72989E07B005DBC47 /* DetailViewController.swift */; };
 		D3B068D5298F167100C6A691 /* PostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B068D4298F167100C6A691 /* PostersViewController.swift */; };
-		D3B068D7298F192500C6A691 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B068D6298F192500C6A691 /* Poster.swift */; };
 		D3B068DB298F1CCE00C6A691 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B068DA298F1CCE00C6A691 /* PosterCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		D32F09B52989B603005DBC47 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		D32F09B72989E07B005DBC47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D3B068D4298F167100C6A691 /* PostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersViewController.swift; sourceTree = "<group>"; };
-		D3B068D6298F192500C6A691 /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		D3B068DA298F1CCE00C6A691 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +150,6 @@
 		124A9A8E297B1AAE006AAACF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D3B068D6298F192500C6A691 /* Poster.swift */,
 				124A9A8F297B1B67006AAACF /* Movies.swift */,
 			);
 			path = Models;
@@ -301,7 +298,6 @@
 				D3B068DB298F1CCE00C6A691 /* PosterCell.swift in Sources */,
 				124A9A90297B1B67006AAACF /* Movies.swift in Sources */,
 				D32F09B82989E07B005DBC47 /* DetailViewController.swift in Sources */,
-				D3B068D7298F192500C6A691 /* Poster.swift in Sources */,
 				D32F09B62989B603005DBC47 /* MovieCell.swift in Sources */,
 				D3B068D5298F167100C6A691 /* PostersViewController.swift in Sources */,
 				124A9A5A297B1808006AAACF /* SceneDelegate.swift in Sources */,

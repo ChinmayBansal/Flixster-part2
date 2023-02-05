@@ -258,6 +258,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="posterImageView" destination="gmC-Fe-DE8" id="nr0-DL-Wgi"/>
+                                            <segue destination="nQa-6Y-TZA" kind="show" id="GoC-RD-mrr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -279,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7o-lK-t7M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533.5877862595419" y="705.63380281690149"/>
+            <point key="canvasLocation" x="2008" y="706"/>
         </scene>
         <!--Movies-->
         <scene sceneID="UiH-yh-u2v">
@@ -338,6 +339,9 @@
             <point key="canvasLocation" x="605" y="706"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GoC-RD-mrr"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="film.fill" catalog="system" width="128" height="93"/>
         <image name="film.stack.fill" catalog="system" width="128" height="122"/>

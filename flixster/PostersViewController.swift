@@ -28,7 +28,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
             return cell
     }
     
-    var posters: [Poster] = []
+    var posters: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +55,14 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
             let decoder = JSONDecoder()
             do {
                 // Try to parse the response into our custom model
-                let response = try decoder.decode(PosterSearchResponse.self, from: data)
+                let response = try decoder.decode(MoviesResponse.self, from: data)
                 let posters = response.results
                 print(posters)
                 DispatchQueue.main.async {
-                    self?.posters = posters // <-- Reload data after the line where we set the albums property
+                    self?.posters = posters
                     self?.collectionView.reloadData()
                 }
+    
             } catch {
                 print(error.localizedDescription)
             }
@@ -97,6 +98,22 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
     
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: Pt 1 - Pass the selected track to the detail view controller
+        
+        if let cell = sender as? UICollectionViewCell,
+           let indexPath = collectionView.indexPath(for: cell),
+           let detailViewController = segue.destination as? DetailViewController {
+           let movie = posters[indexPath.row]
+            
+            detailViewController.movie = movie
+
+            }
+        
+           
+
+    }
     /*
     // MARK: - Navigation
 

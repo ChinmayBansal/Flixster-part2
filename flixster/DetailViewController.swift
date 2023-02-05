@@ -22,8 +22,8 @@ class DetailViewController: UIViewController {
         let votes_average = String(movie.vote_average)
         averageVotesLabel.text = votes_average
         
-//        let popularity = String(movie.popularity)
-//        popularityLabel.text = popularity
+        let popularity = String(movie.popularity)
+        popularityLabel.text = popularity
         
         let num_votes = String(movie.vote_count)
         popularityLabel.text = num_votes
